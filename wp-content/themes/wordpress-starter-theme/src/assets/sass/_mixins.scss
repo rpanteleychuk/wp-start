@@ -57,16 +57,3 @@
         font-size: $fMax;
     }
 }
-@mixin fluid-line-height($lMin, $lMax, $lwMin, $lwMax, $lFallback: false, $lUnits: px) {
-    line-height: $lMin;
-    @media (min-width: $lwMin) {
-        @if ($lFallback) {
-            line-height: $lFallback;
-        }
-        line-height: calcFluidFontSize($lMin, $lMax, $lwMin, $lwMax, $lUnits);
-    }
-    @media (min-width: $lwMax) {
-        line-height: $lMax;
-    }
-}
-
